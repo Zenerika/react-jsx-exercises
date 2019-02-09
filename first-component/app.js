@@ -1,5 +1,7 @@
 let FirstComponent = () => {
-    return <span>Make this component render like the Windows Logo: <a href="https://goo.gl/images/mY5Qdv" target="_blank">https://goo.gl/images/mY5Qdv</a></span>
+    return (
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Windows_logo_-_2012_derivative.svg/2000px-Windows_logo_-_2012_derivative.svg.png" width="300px"/>
+    )
 }
 
 ReactDOM.render(<FirstComponent />, document.getElementById('root'))
