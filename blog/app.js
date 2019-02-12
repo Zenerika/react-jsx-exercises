@@ -67,7 +67,7 @@ const Blog = () => {
         <Header/>
         <Article/>
         <Footer/>
-</div>)
+    </div>)
 }
 
 ReactDOM.render(<Blog />, document.getElementById('root'))
