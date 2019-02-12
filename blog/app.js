@@ -3,10 +3,15 @@ const backgroundImage = {
     height: "200px",
     backgroundImage: "URL('https://www.mega.com/sites/giga/files/thumbnails/image/enterprise-architecture-header.jpg')",
     color: "white",
+    padding: "5px 10px",
 };
 const bodyCSS = {
-    height: "600px",
+    height: "400px",
     margin: "20px 20px",    
+    width: "70%",
+};
+const panel = {
+    width: "30%"
 };
 const footerImage = {
     width: "1200px",
@@ -31,7 +36,23 @@ let Header = () => {
 }
 const Article = () => {
     return (
-    <div style={bodyCSS}>{BlogBody}
+    <div className="body">
+        <div style={bodyCSS}>{BlogBody}</div>
+        <div className="panel"><strong>Archive</strong><br></br>
+            January 2019<br></br>
+            December 2018<br></br>
+            November 2018<br></br>
+            October 2018<br></br>
+            September 2018<br></br>
+            August 2018<br></br>
+            July 2018<br></br>
+            June 2018<br></br>
+            May 2018<br></br>
+            April 2018<br></br>
+            March 2018<br></br>
+            February 2018<br></br>
+            January 2018<br></br>
+        </div>
     </div>)
 }
 const Footer = () => {
