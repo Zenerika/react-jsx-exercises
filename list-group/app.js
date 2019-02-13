@@ -1,10 +1,34 @@
-let ListGroupItem = () => {
-    return <span>Make this component render like a Bootstrap list group item: <a href="https://getbootstrap.com/docs/4.1/components/list-group/" target="_blank">https://goo.gl/images/mY5Qdv</a></span>
+const Items = [{
+    item: "Cras justo odio"
+},
+{
+    item: "Dapibus ac facilisis in"
+},
+{
+    item: "Morbi leo risus"
+},
+{
+    item: "Vestibulum at eros"
+}]
+
+let ListGroupItem = ({itemRender}) => {
+    return (
+        <ul className="list-group">
+              <li className="list-group-item"> { itemRender } </li>
+        </ul>
+    )
 }
 
-let ListGroup = () => {
-    return <span>Make this Component render a handful of ListGroupItems</span>
+let ListGroup = ({items}) => {
+    console.log(items)
+    return (
+    <span>
+        {items.map(function(listRender, index) {
+            return <ListGroupItem itemRender={listRender.item} key={index}/>
+            })}
+    </span>
+    )
 }
 
 
-ReactDOM.render(<ListGroup />, document.getElementById('root'))
+ReactDOM.render(<ListGroup items={Items} />, document.getElementById('root'))

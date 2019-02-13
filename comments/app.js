@@ -46,8 +46,6 @@ let Comment = ({profileRender, userRender, commentRender}) => {
 }
 
 let Comments = ({accounts}) => {
-    console.log('accounts', accounts);
-
     return (
         <div>
             {accounts.map(function(accountsRender) {
